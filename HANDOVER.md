@@ -115,11 +115,6 @@ Typical impacted areas:
 - **Synthetic data export**
   - write ECG back into VivaLNK-like format
 
-**How to record the exact files changed**
-```bash
-git diff --name-only
-git diff
-```
 
 ---
 
@@ -190,8 +185,3 @@ python generate.py --num_samples <N> --out synthetic/
 - Checklist for the practical implementation (Hebrew)
 - Challenges / questions / theoretical solutions notes (Hebrew)
 - SimGAN paper copy (docx)
-
----
-
-## Disclaimer
-Research use only. Ensure compliance with applicable policies/regulations when handling patient data and producing synthetic derivatives.
