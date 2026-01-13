@@ -22,7 +22,8 @@ This project adapts **SimGAN** (Simulator-Based GAN with an additional **Euler l
 
 ```bash
 # 1) install deps
-pip install -r requirements.txt
+# UNFORTUNATLEY THE requirements.txt FILE WAS IN THE PIPELINE_ORIGINAL MACHINE
+#pip install -r requirements.txt 
 
 # 2) pretrain on MIT-BIH (Normal class)
 python train_sim_gan.py --GAN_TYPE SimDCGAN --BEAT_TYPE N --PHASE pretrain --BATCH_SIZE 64 --NUM_ITERATIONS 20000 
