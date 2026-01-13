@@ -41,13 +41,3 @@ python generate.py --num_samples <N> --out synthetic/
 
 ## Documentation
 - Full handover / technical notes: **[`docs/HANDOVER.md`](docs/HANDOVER.md)**
-
-## Suggested repo hygiene
-Track code changes explicitly:
-```bash
-git diff --name-only
-git diff
-```
-
-## Disclaimer
-Research use only. Ensure compliance with applicable policies/regulations when handling patient data and producing synthetic derivatives.
