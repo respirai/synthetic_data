@@ -27,13 +27,13 @@ This project adapts **SimGAN** (Simulator-Based GAN with an additional **Euler l
 #pip install -r requirements.txt 
 
 # 2) pretrain on MIT-BIH (Normal class)
-python train_sim_gan.py --GAN_TYPE SimDCGAN --BEAT_TYPE N --PHASE pretrain --BATCH_SIZE 64 --NUM_ITERATIONS 20000 
+python gan_models/train_sim_gan.py --GAN_TYPE SimDCGAN --BEAT_TYPE N --PHASE pretrain --BATCH_SIZE 64 --NUM_ITERATIONS 20000 
 
 # 3) fine-tune on VivaLNK COPD
-python train_sim_gan.py --GAN_TYPE SimDCGAN --BEAT_TYPE N --PHASE finetune --CKPT <path_to_pretrained_ckpt> --BATCH_SIZE 64 --NUM_ITERATIONS 20000 
+python gan_models/train_sim_gan.py --GAN_TYPE SimDCGAN --BEAT_TYPE N --PHASE finetune --CKPT <path_to_pretrained_ckpt> --BATCH_SIZE 64 --NUM_ITERATIONS 20000 
 
 # 4) generate synthetic samples
-python generate.py --num_samples <N> --out synthetic/
+python gan_models/generate_from_checkpoint.py --GAN_TYPE SimDCGAN --CKPT <path_to_finetuned_ckpt> --OUT_DIR synthetic/
 ```
 
 ## Data notes (VivaLNK)
