@@ -23,6 +23,7 @@ This project adapts **SimGAN** (Simulator-Based GAN with an additional **Euler l
 ```bash
 # 1) install deps
 # UNFORTUNATLEY THE requirements.txt FILE WAS IN THE PIPELINE_ORIGINAL MACHINE
+# SO NEEDS TO INSTALL ALL PACKAGES 1 BY 1
 #pip install -r requirements.txt 
 
 # 2) pretrain on MIT-BIH (Normal class)
