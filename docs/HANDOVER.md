@@ -95,11 +95,7 @@ Status:
 
 Current generator outputs a single beat. To generate “full ECG” or at least windows:
 
-**Approach 1 (simple)**
-
-- Increase generator output length to **T samples** and compute Euler loss over the entire window.
-
-**Approach 2 (preferred)** Hierarchical model:
+**Approach**
 
 - beat morphology generator
 - RR/HRV (rhythm) module
@@ -220,12 +216,11 @@ python gan_models/generate_from_checkpoint.py --GAN_TYPE SimDCGAN --CKPT <path_t
 ## 9) Open Questions / Next Steps
 
 - Decide canonical representation: beat-level vs window-level for downstream tasks.
-- Finalize handling of \~76.8 samples/beat at 128 Hz (fixed L vs time-normalization).
-- Implement and validate η-fitting on real COPD beats; sanity-check μ/σ ranges.
-- Define evaluation metrics:
+- Define evaluation metrics for multi-beat:
   - physiological plausibility
   - utility (TSTR: train-on-synthetic, test-on-real)
   - privacy (nearest-neighbor checks)
+  - *ONLY IN CASE WHERE THE MULTI-BEAT GENERATION EVALUATION IS NOT SUFFICIENT: Implement and validate η-fitting on real COPD beats; sanity-check μ/σ ranges.*
 - Add **ACC generation** after ECG window generation is stable.
 
 ##
