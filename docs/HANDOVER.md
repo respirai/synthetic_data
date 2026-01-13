@@ -140,9 +140,10 @@ Compared to the original SimGAN implementation, the following **high-level chang
   Implemented an explicit two-stage training pipeline:
   1. Pretrain SimDCGAN on **MIT-BIH (Normal / N class)**
   2. Fine-tune the pretrained model on **VivaLNK COPD** data
+  This is reflected both in the training logic and in the documentation, using placeholder flags such as `--PHASE pretrain / finetune` and `--CKPT <path_to_checkpoint>`.
 
 - **Checkpoint-driven training & generation:**
-  Added utilities to enable training continuation and controlled generation from specific checkpoints:
+  Added helper scripts to support a practical workflow where models are pretrained, fine-tuned, and later reused for controlled generation:
   - `gan_models/generate_from_checkpoint.py`
   - `gan_models/train_utils.py`
 
