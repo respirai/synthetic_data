@@ -120,19 +120,19 @@ Current generator outputs a single beat. To generate “full ECG” or at least 
 Compared to the original SimGAN implementation, the following high-level changes were introduced to support **MIT-BIH → VivaLNK COPD transfer learning**:
 
 
-Added VivaLNK/COPD dataset ingestion code (new loaders):
-Added COPD-specific loader(s), notably data_reader/ecg_dataset_copd_from_csv.py.
+- Added VivaLNK/COPD dataset ingestion code (new loaders):
+- Added COPD-specific loader(s), notably data_reader/ecg_dataset_copd_from_csv.py.
 
-Resampling support introduced for VivaLNK 128 Hz → internal 360 Hz pipeline:
-Added data_reader/transforms_resample.py and documented the strategy: keep SimGAN internal pipeline at 360 Hz, resample at input/output boundaries to match VivaLNK 128 Hz.
+- Resampling support introduced for VivaLNK 128 Hz → internal 360 Hz pipeline:
+- Added data_reader/transforms_resample.py and documented the strategy: keep SimGAN internal pipeline at 360 Hz, resample at input/output boundaries to match VivaLNK 128 Hz.
 
-Multi-beat / window-oriented simulator step added (prep for “ECG windows”):
-Added dynamical_model/Euler/euler_window.py (upstream Euler module is single-step oriented). This is part of the path toward generating consecutive beats / windows rather than isolated beats.
+- Multi-beat / window-oriented simulator step added (prep for “ECG windows”):
+- Added dynamical_model/Euler/euler_window.py (upstream Euler module is single-step oriented). This is part of the path toward generating consecutive beats / windows rather than isolated beats.
 
-Checkpoint-based generation utilities added:
-Added gan_models/generate_from_checkpoint.py + gan_models/train_utils.py (not present in upstream). These support a workflow where you pretrain, fine-tune, then generate from a chosen checkpoint.
+- Checkpoint-based generation utilities added:
+- Added gan_models/generate_from_checkpoint.py + gan_models/train_utils.py (not present in upstream). These support a workflow where you pretrain, fine-tune, then generate from a chosen checkpoint.
 
-transfer learning plan written into repo:
+- transfer learning plan written into repo:
  explicitly layout a two-stage pipeline: pretrain on MIT‑BIH → fine-tune on VivaLNK COPD, with placeholder flags like --PHASE pretrain/finetune and --CKPT. It also points to docs/HANDOVER.md for the detailed handover.
 ---
 
