@@ -8,7 +8,7 @@ This project adapts **SimGAN** (Simulator-Based GAN with an additional **Euler l
 
 ## What we are trying to produce
 - **Multi-beat ECG windows** (continuous segments) where consecutive beats represent the **same patient** (stable morphology).
-- Eventually: **ECG (+ ACC)** aligned to VivaLNK device characteristics.
+- Eventually: **ECG** aligned to VivaLNK device characteristics.
 
 ## Current status (high level)
 - ✅ Baseline SimGAN training reproduced on MIT-BIH (single-beat generation).
