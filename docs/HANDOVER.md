@@ -125,7 +125,10 @@ Compared to the original SimGAN implementation, the following high-level changes
   Added COPD-specific loader(s), notably data_reader/ecg_dataset_copd_from_csv.py.
 
 - Resampling support introduced for VivaLNK 128 Hz → internal 360 Hz pipeline:
- Added data_reader/transforms_resample.py and documented the strategy: keep SimGAN internal pipeline at 360 Hz, resample at input/output boundaries to match VivaLNK 128 Hz.
+  
+ Added data_reader/transforms_resample.py and documented the strategy:
+ 
+ keep SimGAN internal pipeline at 360 Hz, resample at input/output boundaries to match VivaLNK 128 Hz.
 
 - Multi-beat / window-oriented simulator step added (prep for “ECG windows”):
   
